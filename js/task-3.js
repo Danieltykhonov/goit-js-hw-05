@@ -1,36 +1,97 @@
 'use strict';
 
 
-const profile = {
-  username: "Jacob",
-  playTime: 300,
-
-  changeUsername(newName){
-    this.username = newName;
-  },
-  updatePlayTime(hours) {
-    this.playTime = hours + this.playTime;
-    
-  },
-
-  getInfo(){
-    return `${this.username} has ${this.playTime} active hours!`
-  },
-};
+// Виконуй це завдання у файлі task-3.js
 
 
+// Оголоси стрілочну функцію sortByDescendingFriendCount, 
+// яка очікує один параметр users — масив об'єктів користувачів.
+//  Функція повертає масив усіх користувачів, відсортованих за спаданням кількості їхніх друзів (властивість friends).
 
 
-
-console.log(profile.getInfo()); // "Jacob has 300 active hours!"
-
-profile.changeUsername("Marco");
-console.log(profile.getInfo()); // "Marco has 300 active hours!"
-
-profile.updatePlayTime(20);
-console.log(profile.getInfo()); // "Marco has 320 active hours!"
+const sortByDescendingFriendCount = (users) =>
+  users.toSorted((a, b) => b.friends.length - a.friends.length);
 
 
+// Візьми код нижче і встав після оголошення своєї функції для перевірки коректності її роботи. У консоль будуть виведені результати її роботи.
+
+console.log(
+  sortByDescendingFriendCount([
+    {
+      name: "Moore Hensley",
+      friends: ["Sharron Pace"],
+      gender: "male"
+    },
+    {
+      name: "Sharlene Bush",
+      friends: ["Briana Decker", "Sharron Pace"],
+      gender: "female"
+    },
+    {
+      name: "Ross Vazquez",
+      friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+      gender: "male"
+    },
+    {
+      name: "Elma Head",
+      friends: ["Goldie Gentry", "Aisha Tran"],
+      gender: "female"
+    },
+    {
+      name: "Carey Barr",
+      friends: ["Jordan Sampson", "Eddie Strong"],
+      gender: "male"
+    },
+    {
+      name: "Blackburn Dotson",
+      friends: ["Jacklyn Lucas", "Linda Chapman"],
+      gender: "male"
+    },
+    {
+      name: "Sheree Anthony",
+      friends: ["Goldie Gentry", "Briana Decker"],
+      gender: "female"
+    }
+  ])
+);
+
+// [
+//   {
+//     name: "Ross Vazquez",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Elma Head",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     gender: "female"
+//   },
+//   {
+//     name: "Moore Hensley",
+//     friends: ["Sharron Pace"],
+//     gender: "male"
+//   }
+// ]
 
 // Залиш цей код для перевірки ментором.
 
@@ -38,10 +99,9 @@ console.log(profile.getInfo()); // "Marco has 320 active hours!"
 
 // Вимоги
 
-// Значення змінної profile — це об'єкт з властивостями username, playTime, getInfo, changeUsername і updatePlayTime.
-// Значення властивостей getInfo, changeUsername і updatePlayTime — функції.
-// Для звертання до властивостей об'єкта в його методах використано this.
-// Виклик profile.getInfo() до змін повертає "Jacob has 300 active hours!".
-// Виклик profile.changeUsername("Marco") змінює username на "Marco", після чого profile.getInfo() повертає "Marco has 300 active hours!".
-// Виклик profile.updatePlayTime(20) збільшує playTime на 20, після чого profile.getInfo() повертає "Marco has 320 active hours!".
-// Результати всіх викликів console.log виведено в консоль.
+// Оголошено змінну sortByDescendingFriendCount.
+// Змінній sortByDescendingFriendCount присвоєно стрілочну функцію з параметром (users).
+// Для сортування параметра users використано метод toSorted().
+// Виклик функції із зазначеним масивом users повертає новий масив користувачів, відсортований за спаданням кількості їхніх друзів.
+// Виклик з будь-якими валідними аргументами повертає правильне значення.
+// Результати всіх викликів виведено в консоль.
