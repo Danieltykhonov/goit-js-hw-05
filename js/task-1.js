@@ -40,10 +40,7 @@ console.log(
       balance: 2764
     }
   ])
-); 
-
-
-console.log(getUserNames(users));
+);
 // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
 
 // Встав код нижче після оголошення функції для перевірки. Залиш його для перевірки ментором.
@@ -53,7 +50,7 @@ console.log(getUserNames(users));
 
 // Оголошено змінну getUserNames.
 // Змінній getUserNames присвоєно стрілочну функцію з параметром (users).
-// Для перебирання параметра users використано метод map().
+// Для перебирання параметра users використано метод map().~
 // Виклик функції із зазначеним масивом користувачів повертає масив ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"].
 // Виклик з будь-якими валідними аргументами повертає правильне значення.
 // Результати всіх викликів виведено в консоль.
